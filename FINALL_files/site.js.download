@@ -1,0 +1,112 @@
+
+
+
+/*=====Toppers slider=======*/
+$(document).ready(function() {
+ 
+  $("#toppers").owlCarousel({
+ 
+      navigation :false, // Show next and prev buttons
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem:true,
+	  autoPlay:5000
+ 
+      // "singleItem:true" is a shortcut for:
+      // items : 1, 
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+ 
+  });
+  //loader
+  setTimeout(function(){
+		$('body').addClass('loaded');
+		$('h1').css('color','#222222');
+	}, 500);
+	
+	$(function() {
+        $('ul.fader li').hide();
+        $('ul.fader li').css('position', 'absolute');
+        $('ul.fader li').css('top', '0px');
+        $('ul.fader li').css('left', '0px');
+
+        var max = $('ul.fader li').length;
+    
+        function showSlider() {
+            
+            if(localStorage.slider) {                $('.fader').find('li:nth('+localStorage.slider+')').fadeIn();
+                localStorage.slider = parseInt(localStorage.slider,10) + 1;
+                if(localStorage.slider >= max) localStorage.slider=0;
+            }else{
+                 $('.fader').find('li:nth(0)').fadeIn();
+                localStorage.slider=1;
+            }
+        }
+
+       showSlider();
+	   
+	  });
+	   $(window).load(function(){        
+   $('#birthday-Modal').modal('show');
+    });
+	
+    /* ---------------------------------------------- /*
+	 *active menu
+	/* ---------------------------------------------- */
+    $(function () {
+        var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/") + 1);
+
+        $(".nav-active li a").each(function () {
+            if (pgurl == '') {
+                pgurl = "index.asp";
+            }
+            if ($(this).attr("href") == pgurl)
+                $(this).parents('li').addClass("active");
+        })
+    });	
+	
+			//color switcher
+			
+			 $(function() {
+            var $switcher = $('#style_switcher'),
+                $switcher_toggle = $('#style_switcher_toggle'),
+               
+                $body = $('body');
+
+
+            $switcher_toggle.click(function(e) {
+                e.preventDefault();
+                $switcher.toggleClass('switcher_active');
+            });
+
+        });
+			//color switcher2
+			
+			 $(function() {
+            var $switcher2 = $('#style_switcher2'),
+                $switcher_toggle2 = $('#style_switcher_toggle2'),
+               
+                $body = $('body');
+
+
+            $switcher_toggle2.click(function(e) {
+                e.preventDefault();
+                $switcher2.toggleClass('switcher_active2');
+            });
+        });
+			 
+});
+
+     
+
+      
+
+ 
+
+
+
+	 
+
+

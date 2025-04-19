@@ -1,0 +1,153 @@
+/* Main background styling */
+body.login {
+  background-image: url("https://www.jnujaipur.ac.in/Uploads/image/522imguf_career.webp");
+  background-color: #def3ed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Login page container */
+div#login-page {
+  overflow: hidden;
+}
+
+/* Form styling fixes */
+body.login .box-login,
+body.login .box-forgot,
+body.login .box-register {
+  display: none;
+}
+
+/* Default show login box */
+.box-login {
+  display: block !important;
+}
+
+/* Forgot password box styling */
+body.login .box-forgot {
+  padding: 0;
+  top: 170px;
+  margin-left: 38px;
+  margin-right: 20px;
+}
+
+.box-forgot {
+  margin: 1px 75px 0px 0px;
+  border-radius: 5px;
+}
+
+/* Form fields and inputs */
+.form-group {
+  position: relative;
+}
+
+.input-icon>[class*="fa-"],
+.input-icon>[class*="clip-"] {
+  bottom: 0;
+  color: #909090;
+  display: inline-block;
+  font-size: 14px;
+  left: 5px;
+  line-height: 35px;
+  padding: 0 3px;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+/* Labels */
+body.login label {
+  color: #010101;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+label {
+  padding: 0;
+  margin-bottom: 5px;
+}
+
+/* Button styling */
+.btn-green {
+  background-color: #0050EF;
+  border-color: #2C5FDD;
+  color: white;
+}
+
+.btn-green:hover,
+.btn-green:focus,
+.btn-green:active,
+.btn-green.active {
+  background-color: #F0A30A;
+  border-color: #F0A30A;
+  color: white;
+}
+
+/* EmailJS notification styling */
+.emailjs-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.emailjs-success {
+  background-color: #4CAF50;
+}
+
+.emailjs-error {
+  background-color: #F44336;
+}
+
+/* Text styling */
+.texttrans {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+
+/* For the social media icons */
+.socialnav li a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  color: #fff;
+  border-radius: 2px;
+  background-color: #3B5998;
+  margin-right: 5px;
+}
+
+.socialnav li a:hover {
+  opacity: 0.8;
+}
+
+/* For responsive design */
+@media (max-width: 767px) {
+  .col-sm-8 {
+    width: 100%;
+  }
+  
+  .col-sm-4 {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .texttrans {
+    margin-top: 20px;
+  }
+  
+  .box-login, .box-forgot {
+    margin: 0 10px;
+  }
+}

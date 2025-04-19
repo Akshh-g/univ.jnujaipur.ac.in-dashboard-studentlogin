@@ -1,0 +1,16 @@
+
+
+@media only screen and (min-width:768px){
+	.mobileShow {
+    display: none;
+}
+}
+
+
+@media only screen and (max-width:767px){
+	.portasection{
+    display: none;
+}
+}
+
+
